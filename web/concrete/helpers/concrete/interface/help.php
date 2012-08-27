@@ -40,7 +40,7 @@ class ConcreteInterfaceHelpHelper {
 			'/dashboard/system/backup_restore/database' => t('Export your site\'s structure and content to an XML document that you can use to develop custom sites with our Starting Points add-on.'),
 			'/dashboard/system/environment/info' => t("View information about your concrete5 site's configuration, as well as details about the hosting environment you\'re using."),
 			'/dashboard/system/attributes/types' => t("Select which types of attributes to make available to pages, users, and files."),
-			'/dashboard/system/attributes/sets' => t("Attributes are available to pages, users and files. If you want to add a new attribute to any of these objects, start here."),
+			'/dashboard/system/attributes/sets' => t("Attributes are available to pages (aka Collections), users and files. If you want to add a new attribute to any of these objects, start here."),
 			'/dashboard/system/mail/importers' => t("These scripts look for incoming mail to your site. Add-ons like the concrete5 Discussion Forum will attach emails to posts if they match, creating a new page containing the message as reply text."),
 			'/dashboard/system/mail/method' => t("Set concrete5 to use an external SMTP server, instead of the default PHP Mail function, for sending email."),
 			'/dashboard/system/permissions/ip_blacklist' => t("Block users at specific IP addresses from logging into your site. Blocked users can still view pages that are visible to guests."),
@@ -65,7 +65,11 @@ class ConcreteInterfaceHelpHelper {
 			'/dashboard/system/seo/urls' => t("Keep your web page addresses easy for humans and search engines to read by automatically removing references to index.php. You may need to create a file called .htaccess on your server for this to work, but we will try to do it for you first."),
 			'/dashboard/system/seo/tracking_codes' => t("Add any HTML or Javascript code you need for analytics tracking to every page of your site, and pick whether it will go in pages' header or footer. This is where you would input code from Google Analytics, for example."),
 			'/dashboard/system/seo/statistics' => t("Turns tracking of page views, file downloads and user registrations on or off. These are displayed on your site's Dashboard > Reports > Statistics page. If your high-traffic site experiences performance issues, you might consider disabling statistics tracking and investigate the use of an alternate, third-party solution for tracking site stats."),
-			'/dashboard/system/permissions/site' => t("Control basic, general parameters for viewing and editing your site. Viewing Permissions makes your site's pages accessible to all users, registered-users-only or administrators-only. Edit Access controls which groups can edit pages, when logged in. For more granular control, set permissions on pages individually from Page Properties, or enable Advanced Permissions for even more granular control.")
+			'/dashboard/system/permissions/site' => t("Control basic, general parameters for viewing and editing your site. Viewing Permissions makes your site's pages accessible to all users, registered-users-only or administrators-only. Edit Access controls which groups can edit pages, when logged in. For more granular control, set permissions on pages individually from Page Properties, or enable Advanced Permissions for even more granular control."),
+			'/dashboard/composer/edit' => t('Any attributes or block areas you have enabled to be editable in composer for this page type are available here. Add blocks to your page type\'s defaults. After adding the block, click it and choose the option to make it available in composer.'),
+			'/dashboard/users/attributes' => t('Store data about your users-- like site preferences, birthdays, bios and more. Control which elements are available for users to update themselves.'),
+			'/dashboard/users/add' => t('Manually create new user accounts for your concrete5 site.'),
+			'/dashboard' => t('The Dashboard allows you to perform administrative tasks for your site.')
 		);
 		return $pages;
 	}
