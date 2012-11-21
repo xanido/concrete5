@@ -37,6 +37,7 @@ class Concrete5_Controller_Dashboard_Pages_Themes_Inspect extends Controller {
 	public function activate_files($ptID) {
 		try {
 			Loader::model("collection_types");
+			Loader::model("package");
 			$pt = PageTheme::getByID($ptID);
 			$txt = Loader::helper('text');
 			if (!is_array($this->post('pageTypes'))) {
@@ -46,7 +47,7 @@ class Concrete5_Controller_Dashboard_Pages_Themes_Inspect extends Controller {
 			foreach($this->post('pageTypes') as $ptHandle) {
 				$data['ctName'] = $txt->unhandle($ptHandle);
 				$data['ctHandle'] = $ptHandle;
-				$ct = CollectionType::add($data);
+				$ct = CollectionType::add($data, Package::getByID($pt->getPackageID()));
 			}
 			$this->set('message', t('Files in the theme were activated successfully.'));
 		} catch(Exception $e) {
